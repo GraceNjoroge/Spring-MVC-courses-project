@@ -9,7 +9,6 @@ public class Course {
 	}
 
 	public Long getid() {
-		// TODO Auto-generated method stub
 		return id;
 	}
 
