@@ -67,6 +67,6 @@ public class CourseControllerMockMvcTest {
 	public void shouldAPutSingleCourseIntoModel() throws Exception {
 		when(repository.findOne(1L)).thenReturn(firstCourse);
 		
-		mvc.perform(get("/course?id=1")).andExpect(model().attribute("course", is (firstCourse)));
+		mvc.perform(get("/course?id=1")).andExpect(model().attribute("course",is (firstCourse)));
 	}
 }

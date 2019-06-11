@@ -16,15 +16,15 @@ public class CourseRepository {
 		Course javascript = new Course(2L, "Javascript", "JavaScript Description");
 		Course spring = new Course(3L, "Spring", "Spring Description");
 
-		courseList.put(java.getid(), java);
-		courseList.put(javascript.getid(), javascript);
-		courseList.put(spring.getid(), spring);
+		courseList.put(java.getId(), java);
+		courseList.put(javascript.getId(), javascript);
+		courseList.put(spring.getId(), spring);
 	}
 
 	// constructor for testing purposes
 	public CourseRepository(Course... courses) {
 		for (Course course : courses) {
-			courseList.put(course.getid(), course);
+			courseList.put(course.getId(), course);
 		}
 	}
 

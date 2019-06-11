@@ -9,6 +9,7 @@ import org.junit.Test;
 
 public class CourseRepositoryTest {
 
+	CourseRepository underTest;
 	
 	private long firstCourseId = 1L;
 	private Course firstCourse = new Course(firstCourseId , "course name", "course description");
@@ -18,14 +19,14 @@ public class CourseRepositoryTest {
 	
 	@Test 
 	public void shouldFindACourse() {
-		CourseRepository underTest = new CourseRepository(firstCourse);
+		 underTest = new CourseRepository(firstCourse);
 		Course result = underTest.findOne(firstCourseId); 
 		assertThat(result, is(firstCourse));
 	}
 	
 	@Test 
 	public void shouldFindASecondCourse() {
-		CourseRepository underTest = new CourseRepository(secondCourse);
+		underTest = new CourseRepository(secondCourse);
 		Course result = underTest.findOne(secondCourseId);
 		assertThat(result, is(secondCourse));
 		
@@ -33,7 +34,7 @@ public class CourseRepositoryTest {
 	
 	@Test 
 	public void shouldFindAllCourses() {
-		CourseRepository underTest = new CourseRepository(firstCourse, secondCourse);
+		underTest = new CourseRepository(firstCourse, secondCourse);
 		Collection<Course> result = underTest.findAll();
 		assertThat(result, containsInAnyOrder(firstCourse, secondCourse));
 	}
